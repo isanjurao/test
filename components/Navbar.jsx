@@ -6,14 +6,14 @@ import { AiOutlineShoppingCart , AiFillCloseCircle , AiOutlinePlusCircle ,AiOutl
 import {BsFillBagCheckFill} from 'react-icons/bs';
 const Navbar = () => {
     const togglecart = ()=>{
-       if(ref.current.classList.contains('translate-x-full')){
-           ref.current.classList.remove('translate-x-full')
+       if(ref.current.classList.contains('hidden')){
+           ref.current.classList.remove('hidden')
            ref.current.classList.add('translate-x-0')
        }
     
-    else if(!ref.current.classList.contains('translate-x-full')){
+    else if(!ref.current.classList.contains('hidden')){
         ref.current.classList.remove('translate-x-0')
-        ref.current.classList.add('translate-x-full')
+        ref.current.classList.add('hidden')
     }
  }
     const ref = useRef()
@@ -39,9 +39,9 @@ const Navbar = () => {
         <div onClick={togglecart}  className="cart  cursor-pointer absolute right-0 top-4 mx-5">
            <AiOutlineShoppingCart className='text-xl md:text-3xl'/>
         </div>
-        <div ref={ref} className="sidebar w-72 h-full absolute top-0 right-0 bg-pink-100 px-8 py-10 transform transition-transform translate-x-full">
+        <div ref={ref} className="sidebar hidden  w-72 h-full absolute top-0 right-0 bg-pink-100 px-8 py-10 transform transition-transform ">
             <h2 className='font-bold text-xl text-center'>shopping cart</h2>
-            <span onClick={togglecart} className="absolute top-2 right-2 cursor-pointer text-2xl text-red-700"><AiFillCloseCircle/></span>
+            <span onClick={togglecart} className="absolute top-5 right-2 cursor-pointer text-2xl text-red-700"><AiFillCloseCircle/></span>
         
         <ol className='list-decimal font-semibold'>
            <li>

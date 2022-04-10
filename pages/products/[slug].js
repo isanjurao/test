@@ -84,6 +84,10 @@ const Post = () => {
             </svg>
           </button>
         </div>
+        <div className="pin mt-6 flex space-x-2 text-sm">
+          <input className='px-2 border-2 border-gray-400 rounded-md' type="text"/>
+          <button className='flex ml-14 text-white bg-pink-500 border-0 py-2 px-6 focus:outline-none hover:bg-pink-600 rounded'>check</button>
+        </div>
       </div>
     </div>
   </div>
